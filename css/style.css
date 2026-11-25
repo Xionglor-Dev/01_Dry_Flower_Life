@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/*----------------------
+        共通
+------------------------*/
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #707070;
+    font-family: "Noto Sans Lao", sans-serif;
+}
+
+img {
+    max-width: 100%; /* 画像の横幅を親要素に合わせる */
+    vertical-align: bottom; /* 画像の下に余白ができるのを防ぐ */
+}
+
+li {
+    list-style: none; /* リストのマーカーを消す */
+}
+
+a {
+    color: #707070;
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+a:hover {
+    opacity: 0.7; /* リンクにマウスオーバーした時に少し透過させる */
+}
+
+.wrapper {
+    max-width: 1000px; /* コンテンツの最大横幅を1000pxにする */
+    padding: 0 20px; /* コンテンツの左右に20pxの余白を作る */
+    margin: 0 auto; /* コンテンツを中央寄せにする */
+}
+
+.description {
+    font-size: 15px; /* 説明文の文字サイズを16pxにする */
+}
+/*----------------------
+        header
+--------------------*/
+#header {
+    display: flex; /* ヘッダー内の要素を横並びにする */
+    align-items: center; /* ヘッダー内の要素を縦方向に中央寄せにする */
+    justify-content: space-between; /* ヘッダー内の要素を左右に配置する */
+    padding-top: 35px; /* ヘッダーの上に35pxの余白を作る */
+    padding-bottom: 35px; /* ヘッダーの下に35pxの余白を作る */
+}
+
+#header .logo {
+    max-width: 190px; /* ロゴの最大横幅を190pxにする */
+    line-height: 0; /* ロゴの下に余白ができるのを防ぐ */
+}
+
+#header .logo a {
+    display: block; /* ロゴのリンクをブロック要素にする */
+}
+
+#header .navi {
+    display: flex; /* ナビゲーションの要素を横並びにする */
+    align-items: center; /* ナビゲーションの要素を縦方向に中央寄せにする */
+}
+
+#header .navi li {
+    font-size: 14px; /* ナビゲーションの文字サイズを14pxにする */
+    margin-left: 40px; /* ナビゲーションの左に40pxの余白を作る */
+}
+
+/*----------------------
+        Main Visual
+------------------------*/
+.mainvisual {
+    margin-bottom: 80px; /* メインビジュアルの下に50pxの余白を作る */
+}
+
+.introduction {
+    margin-bottom: 80px; /* 紹介文の下に50pxの余白を作る */
+    text-align: center; /* 紹介文を中央寄せにする */
+}
+
+.introduction .main-title {
+    font-size: 18px; /* キャッチフレーズの文字サイズを18pxにする */
+    font-weight: bold; /* キャッチフレーズの文字を太字にする */
+    margin-bottom: 40px; /* キャッチフレーズの下に40pxの余白を作る */
+}
+
+/*----------------------
+        Profile-section
+------------------------*/
+#profile {
+    display: flex; /* プロフィールの要素を横並びにする */
+    align-items: center; /* プロフィールの要素を縦方向に中央寄せにする */
+    margin-bottom: 120px; /* プロフィールの下に120pxの余白を作る */
+}
+
+.img-profile {
+    width: 50%; /* プロフィール画像の横幅を50%にする */
+    padding-right: 40px; /* プロフィール画像の右に40pxの余白を作る */
+}
+
+.profile-detail {
+    width: 50%; /* プロフィール詳細の横幅を50%にする */
+}
+
+.section-title {
+    font-weight: normal; /* セクションタイトルの文字を標準にする */
+    margin-bottom: 30px; /* セクションタイトルの下に30pxの余白を作る */
+ }
+
+ .section-title .en {
+    display: block; /* セクションタイトルの英語をブロック要素にする */
+    font-size: 40px; /* セクションタイトルの英語の文字サイズを40pxにする */
+ }
+
+ .section-title .jp {
+    display: block; /* セクションタイトルの日本語をブロック要素にする */
+    font-size: 14px; /* セクションタイトルの日本語の文字サイズを14pxにする */
+ }
+
+ /*----------------------
+        Works-section
+------------------------*/
+#works {
+    margin-bottom: 120px; /* 作品紹介の下に120pxの余白を作る */
+}
+
+#works .works-list {
+    display: flex; /* 作品紹介の要素を横並びにする */
+    flex-wrap: wrap; /* 作品紹介の要素を折り返す */
+}
+
+#works .works-list li {
+    width: 32%; /* 作品紹介の要素の横幅を32%にする */
+    margin: 0 2% 2% 0; /* 作品紹介の要素の右に2%の余白を作る */
+}
+
+#works .works-list li:nth-child(3n) {
+    margin-right: 0; /* 作品紹介の要素の3の倍数番目の要素の右の余白を0にする */
+}
+
+/*----------------------
+        Footer          
+---------------------- */
+#footer {
+    font-size: 14px; /* フッターの文字サイズを14pxにする */
+    padding-bottom: 30px; /* フッターの下に30pxの余白を作る */
+    text-align: center; /* フッターの文字を中央寄せにする */
+}
+
+/*
+Responsive Design(Phone)
+------------------------*/
+@media screen and (max-width: 767px) {
+    #header {
+        padding-top: 25px; /* ヘッダーの上に25pxの余白を作る */
+        padding-bottom: 25px; /* ヘッダーの下に25pxの余白を作る */
+    }
+
+    #header .logo {
+        max-width: 120px; /* ロゴの最大横幅を120pxにする */
+    }
+
+    .mainvisual {
+        margin-bottom: 50px; /* メインビジュアルの下に50pxの余白を作る */
+    }
+
+    .introduction {
+        margin-bottom: 50px; /* 紹介文の下に50pxの余白を作る */
+    }
+
+    .introduction .main-title {
+        font-size: 16px; /* キャッチフレーズの文字サイズを16pxにする */
+        margin-bottom: 15px; /* キャッチフレーズの下に30pxの余白を作る */
+    }
+
+    .section-title{
+        font-size: 14px; /* キャッチフレーズの文字サイズを16pxにする */
+        margin-bottom: 15px; /* キャッチフレーズの下に30pxの余白を作る */
+    }
+    
+    .introduction .description {
+        font-size: 12px; /* 説明文の文字サイズを12pxにする */
+    }
+    .profile-detail .description {
+        text-align: left; /* 説明文を左寄せにする */
+        font-size: 12px; /* 説明文の文字サイズを12pxにする */
+    }
+    .section-title .en {
+    font-size: 20px; /* セクションタイトルの英語の文字サイズを40pxにする */
+    }
+    
+    #works {
+        margin-bottom: 60px; /* 作品紹介の下に60pxの余白を作る */
+    }
+    #works .works-list {
+        flex-direction: column; /* 作品紹介の要素を縦並びにする */
+    }
+    #works .works-list li {
+        width: 100%; /* 作品紹介の要素の横幅を100%にする */
+        margin: 0 0 20px; /* 作品紹介の要素の右に4%の余白を作る */    
+    }
+}
